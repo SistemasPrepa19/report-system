@@ -4,46 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Soporte</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Formulario de Soporte</h2>
-    <form id="soporteForm">
-        <label for="usuario">Nombre de Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required><br><br>
 
-        <label for="edificio">Edificio:</label>
-        <select id="edificio" name="edificio">
-            <option value="Edificio A">Edificio A</option>
-            <option value="Edificio B">Edificio B</option>
-            <option value="Edificio C">Edificio C</option>
-        </select><br><br>
+    <div class="title">
+        <h2>Reportes Prepa 19</h2>
+    </div>
+    
+    
+    <form id="soporteForm" class="form">
+        <div class="user-container">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" placeholder="Nombre" name="usuario" required>
+        </div>
 
-        <label for="aula">Aula:</label>
-        <select id="aula" name="aula">
-            <option value="Aula 101">Aula 101</option>
-            <option value="Aula 102">Aula 102</option>
-            <option value="Aula 103">Aula 103</option>
-        </select><br><br>
+        <div class="options-container">
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/916/916771.png
+                " alt="edificio">
+                <select id="edificio" name="edificio">
+                    <option value="" disabled selected>Edificio</option>
+                    <option value="Edificio A">Edificio A</option>
+                    <option value="Edificio B">Edificio B</option>
+                    <option value="Edificio C">Edificio C</option>
+                </select>
+            </div>
+            
+            <div class="container">
+                <img src="https://static.vecteezy.com/system/resources/previews/007/670/372/non_2x/classroom-line-icon-school-and-education-icon-vector.jpg" alt="aula">
+                <select id="aula" name="aula">
+                    <option value="" disabled selected>Aula</option>
+                    <option value="Aula 101">Aula 101</option>
+                    <option value="Aula 102">Aula 102</option>
+                    <option value="Aula 103">Aula 103</option>
+                </select>
+            </div>
+            
+            
+            <div class="container">
+                <img src="https://static.vecteezy.com/system/resources/previews/003/542/702/non_2x/line-icon-for-pc-vector.jpg" alt="Maquina">
+                <select id="maquina" name="maquina">
+                    <option value="" disabled selected>Maquina</option>
+                    <option value="PC 1">PC 1</option>
+                    <option value="PC 2">PC 2</option>
+                    <option value="PC 3">PC 3</option>
+                </select>
+            </div>
+            
+    
+            
+            <div class="container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-19vEeFpmu0Sr7P7E_o_E65aUd3WpiblLA&s" alt="Categoria">
+                <select id="categoria" name="categoria">
+                    <option value="" disabled selected>Categoría</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Redes">Redes</option>
+                </select>
+            </div>
+    
+            <div class="container">
+                <img src="https://cdn-icons-png.flaticon.com/512/1660/1660090.png" alt="Problema">
+                <select id="problema" name="problema">
+                    <option value="" disabled selected>Problema</option>
+                    <option value="Mouse">Mouse</option>
+                    <option value="Teclado">Teclado</option>
+                    <option value="Ethernet">Ethernet</option>
+                </select>
+            </div>
+            
 
-        <label for="maquina">Máquina:</label>
-        <select id="maquina" name="maquina">
-            <option value="PC 1">PC 1</option>
-            <option value="PC 2">PC 2</option>
-            <option value="PC 3">PC 3</option>
-        </select><br><br>
+            <div class="container">
+                <img class="icono" src="https://img.freepik.com/vector-premium/icono-problema-resuelto-contorno-icono-vector-problema-resuelto-diseno-web-aislado-sobre-fondo-blanco_96318-62159.jpg" alt="Listo">
+                <button type="submit">Listo</button>
+            </div>
+        </div>
 
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria">
-            <option value="Hardware">Hardware</option>
-            <option value="Software">Software</option>
-            <option value="Redes">Redes</option>
-        </select><br><br>
-
-        <label for="problema">Descripción del Problema:</label>
-        <textarea id="problema" name="problema" rows="4" cols="50" required></textarea><br><br>
-
-        <button type="submit">Enviar</button>
     </form>
+
+    <footer>
+        <p style="font-size: 12px;">
+            &copy; 2025 MBDEV | Todos los derechos reservados
+        </p>
+    </footer>
 
     <script>
         document.getElementById("soporteForm").addEventListener("submit", function(event){
