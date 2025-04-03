@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Soporte</title>
+</head>
+<body>
+    <h2>Formulario de Soporte</h2>
+    <form id="soporteForm">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+
+        <label for="edificio">Edificio:</label>
+        <select id="edificio" name="edificio">
+            <option value="Edificio A">Edificio A</option>
+            <option value="Edificio B">Edificio B</option>
+            <option value="Edificio C">Edificio C</option>
+        </select><br><br>
+
+        <label for="aula">Aula:</label>
+        <select id="aula" name="aula">
+            <option value="Aula 101">Aula 101</option>
+            <option value="Aula 102">Aula 102</option>
+            <option value="Aula 103">Aula 103</option>
+        </select><br><br>
+
+        <label for="maquina">Máquina:</label>
+        <select id="maquina" name="maquina">
+            <option value="PC 1">PC 1</option>
+            <option value="PC 2">PC 2</option>
+            <option value="PC 3">PC 3</option>
+        </select><br><br>
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Redes">Redes</option>
+        </select><br><br>
+
+        <label for="problema">Descripción del Problema:</label>
+        <textarea id="problema" name="problema" rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("soporteForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            
+            var usuario = document.getElementById("usuario").value;
+            var edificio = document.getElementById("edificio").value;
+            var aula = document.getElementById("aula").value;
+            var maquina = document.getElementById("maquina").value;
+            var categoria = document.getElementById("categoria").value;
+            var problema = document.getElementById("problema").value;
+
+            // Enviar los datos al backend (Google Apps Script) usando fetch
+            fetch('https://script.google.com/macros/s/AKfycbwxS34jSRIRnxVdo3J9csC0TXVxST37sLoFDNQb9BcectuWweOhPAcjT4OqZPLHp3KA/exec', {
+                method: 'POST',
+                mode: "no-cors",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    usuario: usuario,
+                    edificio: edificio,
+                    aula: aula,
+                    maquina: maquina,
+                    categoria: categoria,
+                    problema: problema
+                })
+            }).then(response => {
+                if (response.ok) {
+                    alert('Hubo un error al enviar el formulario');
+                } else {
+                    alert('Formulario enviado correctamente');
+                }
+            }).catch(error => {
+                alert('Error de red: ' + error);
+            });
+        });
+    </script>
+</body>
+</html>
