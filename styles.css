@@ -1,0 +1,106 @@
+*:not(h2, select) {
+    font-size: 16px;
+}
+
+body {
+    background-color: #0b1214;
+    padding: 5px;
+    padding-bottom: 0;
+    color: white;
+    font-family: Verdana;
+    height: 100%;
+}
+
+.title {
+    background-color: #141b23;
+    padding: 3px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.form {
+    background-color: #141b23;
+    padding: 5px;
+    margin: 15px 0;
+    border-radius: 25px;
+}
+
+.user-container {
+    background-color: #1e2736;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+.user-container input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 75%;
+    margin-left: 10px;
+    background-color: #ffffff10;
+    color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.user-container input:focus {
+    box-shadow: 0px 0px 5px white; 
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container {
+    background-color: #1e2736;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 5px; 
+    border-radius: 15px;
+    margin: 5px;
+    height: 150px;
+}
+
+.container img {
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    padding: 15px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+select {
+    width: 130px;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px 25px;
+    margin: 5px;
+    font-weight: 12px;
+}
+
+button {
+    background-color: #277e3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 130px;
+    padding: 5px 25px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
