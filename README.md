@@ -1,6 +1,7 @@
 # Report system to bitacory with google sheets
 
 (URL functional Vercel: https://report-system-lovat.vercel.app/)
+Bitacory - Google Sheets: https://docs.google.com/spreadsheets/d/1je52EDEAu93dXHROuKpY194iy4NG5bghCPDfJxBBISo/edit?gid=0#gid=0
 
 Pending design
 Correct conection
