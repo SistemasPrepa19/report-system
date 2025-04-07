@@ -32,7 +32,7 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
     var solucion = document.getElementById("solucion").value;
 
     // Enviar los datos al backend (Google Apps Script) usando fetch
-    fetch('https://script.google.com/macros/s/AKfycbzGAghPvpAT3_qGbmkmfTsljzP82I8dhJwVXj7qAIEZlVfUlbK5wqZRjVEKQGHKzYQd/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxd2pX0qfCgLsHsiWYft03YViK-d8eqSLdNF0yWf7A-m6PpDAqL7CPB0w1ayG3RVLi9/exec', {
         method: 'POST',
         mode: "no-cors",
         headers: {
@@ -58,7 +58,6 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
         alert('Error de red: ' + error);
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const botonSoporte = document.getElementById('abrirSoporte');
