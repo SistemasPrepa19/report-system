@@ -64,12 +64,26 @@ label {
 }
 
 .solution-container {
+    display: none;
     background-color: rgba(19, 45, 70, 0.8);
     align-items: center;
     margin: 5px;
     padding: 15px 10px;
     border-radius: 10px;
     height: 25%;
+}
+
+.soporte-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#abrirSoporte {
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin: 15px 0;
 }
 
 .solution-container input {
@@ -147,7 +161,7 @@ select {
     border: solid 1px #01acc3;
 }
 
-button {
+button:not(#abrirSoporte) {
     padding: 5px;
     margin: 5px 0 10px;
     border-radius: 5px;
@@ -159,6 +173,11 @@ button {
     font-weight: bold;
     box-shadow: 0 0 15px #01acc380;
 }
+
+button:active {
+    background-color: red;
+    transform: scale(1.1);
+  }
 
 footer {
     text-align: center;
