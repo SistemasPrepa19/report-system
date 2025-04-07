@@ -29,9 +29,10 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
     var maquina = document.getElementById("maquina").value;
     var categoria = document.getElementById("categoria").value;
     var problema = document.getElementById("problema").value;
+    var solucion = document.getElementById("solucion").value;
 
     // Enviar los datos al backend (Google Apps Script) usando fetch
-    fetch('https://script.google.com/macros/s/AKfycbwxS34jSRIRnxVdo3J9csC0TXVxST37sLoFDNQb9BcectuWweOhPAcjT4OqZPLHp3KA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzGAghPvpAT3_qGbmkmfTsljzP82I8dhJwVXj7qAIEZlVfUlbK5wqZRjVEKQGHKzYQd/exec', {
         method: 'POST',
         mode: "no-cors",
         headers: {
@@ -43,15 +44,20 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
             aula: aula,
             maquina: maquina,
             categoria: categoria,
-            problema: problema
+            problema: problema,
+            solucion: solucion
         })
     }).then(response => {
         if (response.ok) {
             mostrarNotificacion('Hubo un error al enviar el formulario', 'error');
         } else {
             mostrarNotificacion('Formulario enviado correctamente', 'exito');
+            console.log(usuario+'...'+solucion);
         }
     }).catch(error => {
         alert('Error de red: ' + error);
     });
 });
+
+
+  
