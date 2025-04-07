@@ -14,6 +14,13 @@
     
     
     <form id="soporteForm" class="form">
+        <div class="instructions">
+            <p>
+                <strong>IMPORTANTE!</strong> <br>
+                Ingresa tu <u>nombre</u> y selecciona las <u>5 opciones</u> correspondientes para dar un soporte eficiente.
+            </p>
+        </div>
+
         <div class="user-container">
             <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" placeholder="Nombre" name="usuario" required>
@@ -31,35 +38,24 @@
                         <option value="Edificio C">Edificio C</option>
                         <option value="Edificio D">Edificio D</option>
                         <option value="Edificio E">Edificio E</option>
+                        <option value="Edificio T">Edificio T</option>
                     </optgroup>
                     <optgroup label="Otros">
-                        <option value="TAES">TAES</option>
                         <option value="Biblioteca">Biblioteca</option>
                         <option value="Coordinación">Coordinación</option>
-                        <option value="Control Escolar">Control Escolar</option>
+                        <option value="Dirección">Dirección</option>
                     </optgroup>
                 </select>
             </div>
             
             <div class="container">
-                <img src="https://static.vecteezy.com/system/resources/previews/007/670/372/non_2x/classroom-line-icon-school-and-education-icon-vector.jpg" alt="aula">
+                <img src="https://cdn-icons-png.freepik.com/512/781/781021.png" alt="aula">
                 <select id="aula" name="aula">
                     <option value="" disabled selected>Aula / Lab</option>
-                    <optgroup label="Laboratorios">
-                        <option value="Laboratorio A">Laboratorio A</option>
-                        <option value="Laboratorio B">Laboratorio B</option>
-                        <option value="Laboratorio C">Laboratorio C</option>
-                        <option value="Laboratorio D">Laboratorio D</option>
-                        <option value="Laboratorio Idiomas">Laboratorio Idiomas</option>
-                        <option value="Fab Lab">Fab Lab</option>
-                        <option value="Usos multiples">Usos multiples</option>
-                    </optgroup>
-                    <optgroup label="Otros">
-                        <option value="Biblioteca">Biblioteca</option>
-                        <option value="Coordinación">Coordinación</option>
-                        <option value="Control Escolar">Control Escolar</option>
-                    </optgroup>
                     <optgroup label="Edificio A">
+                        <option value="Laboratorio A">Laboratorio A</option>
+                        <option value="Prefectura">Prefectura</option>
+                        <option value="Laboratorio Ciencias">Laboratorio Ciencias</option>
                         <option value="Aula 01">Aula 01</option>
                         <option value="Aula 02">Aula 02</option>
                         <option value="Aula 03">Aula 03</option>
@@ -70,6 +66,9 @@
                         <option value="Aula 08">Aula 08</option>
                     </optgroup>
                     <optgroup label="Edificio B">
+                        <option value="Laboratorio B">Laboratorio B</option>
+                        <option value="CIVIS">CIVIS</option>
+                        <option value="Oficialía">Oficialía</option>
                         <option value="Aula 09">Aula 09</option>
                         <option value="Aula 10">Aula 10</option>
                         <option value="Aula 11">Aula 11</option>
@@ -80,6 +79,8 @@
                         <option value="Aula 16">Aula 16</option>
                     </optgroup>
                     <optgroup label="Edificio C">
+                        <option value="Laboratorio Biología">Laboratorio Biología</option>
+                        <option value="Usos multiples">Usos multiples</option>
                         <option value="Aula 17">Aula 17</option>
                         <option value="Aula 18">Aula 18</option>
                         <option value="Aula 19">Aula 19</option>
@@ -89,7 +90,11 @@
                         <option value="Aula 23">Aula 23</option>
                         <option value="Aula 24">Aula 24</option>
                     </optgroup>
-                    <optgroup label="Edificio E">
+                    <optgroup label="Edificio D">
+                        <option value="Laboratorio Idiomas">Laboratorio Idiomas</option>
+                        <option value="Cabina de Radio">Cabina de Radio</option>
+                        <option value="Sala de Profesores">Sala de Profesores</option>
+                        <option value="Realidad Virtual">Realidad Virtual</option>
                         <option value="Aula 25">Aula 25</option>
                         <option value="Aula 26">Aula 26</option>
                         <option value="Aula 27">Aula 27</option>
@@ -97,23 +102,42 @@
                         <option value="Aula 29">Aula 29</option>
                         <option value="Aula 30">Aula 30</option>
                         <option value="Aula 31">Aula 31</option>
-                        <option value="Aula 32">Aula 32</option>
                     </optgroup>
-                    <optgroup label="Edificio D">
-                        <option value="Aula 33">Aula 33</option>
-                        <option value="Aula 34">Aula 34</option>
-                        <option value="Aula 35">Aula 35</option>
-                        <option value="Aula 36">Aula 36</option>
-                        <option value="Aula 37">Aula 37</option>
-                        <option value="Aula 38">Aula 38</option>
-                        <option value="Aula 39">Aula 39</option>
-                        <option value="Aula 40">Aula 40</option>
+                    <optgroup label="Edificio E">
+                        <option value="Laboratorio E">Laboratorio E</option>
+                        <option value="Oficina">Oficina</option>
+                        <option value="TAE Matemáticas">TAE Matemáticas</option>
+                        <option value="TAE Lectura">TAE Lectura</option>
+                        <option value="TAE Ser Global">TAE Ser Global</option>
+                        <option value="TAE Politicas">TAE Politicas</option>
+                        <option value="CIPD">CIPD</option>
+                        <option value="Libros">Libros</option>
+                        <option value="Gimnasio">Gimnasio</option>
+                        <option value="Bicicletas">Bicicletas</option>
+                    </optgroup>
+                    <optgroup label="Edificio T">
+                        <option value="Fab Lab">Fab Lab</option>
+                        <option value="TAE Música">TAE Música</option>
+                        <option value="TAE Fotografía">TAE Fotografía</option>
+                        <option value="TAE Modas">TAE Modas</option>
+                        <option value="TAE Alimentos">TAE Alimentos</option>
+                        <option value="TAE Teatro">TAE Teatro</option>
+                        <option value="TAE Dibujo">TAE Dibujo</option>
+                        <option value="TAE Robótica">TAE Robótica</option>
+                        <option value="TAE Negocios">TAE Negocios</option>
+                        <option value="TAE Yoga">TAE Yoga</option>
+                        <option value="TAE FabLab">TAE FabLab</option>
+                    </optgroup>
+                    <optgroup label="Otros">
+                        <option value="Biblioteca">Biblioteca</option>
+                        <option value="Coordinación">Coordinación</option>
+                        <option value="Dirección">Dirección</option>
                     </optgroup>
                 </select>
             </div>
             
             <div class="container">
-                <img src="https://static.vecteezy.com/system/resources/previews/003/542/702/non_2x/line-icon-for-pc-vector.jpg" alt="Maquina">
+                <img src="https://cdn-icons-png.flaticon.com/512/4703/4703487.png" alt="Maquina">
                 <select id="maquina" name="maquina">
                     <option value="" disabled selected>Maquina</option>
                     <optgroup label="Otros">
@@ -187,7 +211,7 @@
             </div>
             
             <div class="container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-19vEeFpmu0Sr7P7E_o_E65aUd3WpiblLA&s" alt="Categoria">
+                <img src="https://cdn-icons-png.flaticon.com/256/992/992605.png" alt="Categoria">
                 <select id="categoria" name="categoria">
                     <option value="" disabled selected>Categoría</option>
                     <option value="Hardware">Hardware</option>
@@ -207,10 +231,16 @@
             </div>
 
             <div class="container">
-                <img class="icono" src="https://img.freepik.com/vector-premium/icono-problema-resuelto-contorno-icono-vector-problema-resuelto-diseno-web-aislado-sobre-fondo-blanco_96318-62159.jpg" alt="Listo">
-                <button type="submit">Listo</button>
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/7191/7191281.png" alt="Listo">
+                <button type="submit">Reportar</button>
             </div>
         </div>
+
+        <div class="solution-container" id="solution">
+            <label for="solucion">Solucionado con:</label>
+            <input type="text" id="solucion" placeholder="Solución..." name="solucion">
+        </div>
+        
 
     </form>
 
