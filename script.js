@@ -60,4 +60,12 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const botonSoporte = document.getElementById('abrirSoporte');
+    const inputSolucion = document.getElementById('solution');
+  
+    botonSoporte.addEventListener('click', function () {
+      inputSolucion.style.display = 'block';
+    });
+  });
   
