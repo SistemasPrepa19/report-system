@@ -32,7 +32,7 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
     var solucion = document.getElementById("solucion").value;
 
     // Enviar los datos al backend (Google Apps Script) usando fetch
-    fetch('https://script.google.com/macros/s/AKfycbxd2pX0qfCgLsHsiWYft03YViK-d8eqSLdNF0yWf7A-m6PpDAqL7CPB0w1ayG3RVLi9/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxd_HfBXU6VgmADgbOTGaa45yFS8vQhEmGLKbVWMEwurVTRfumY9VRBtKw-8ovnC3Gh/exec', {
         method: 'POST',
         mode: "no-cors",
         headers: {
