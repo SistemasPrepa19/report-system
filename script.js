@@ -49,10 +49,9 @@ document.getElementById("soporteForm").addEventListener("submit", function(event
         })
     }).then(response => {
         if (response.ok) {
-            mostrarNotificacion('Hubo un error al enviar el formulario', 'error');
+            mostrarNotificacion('Ups, hubo un error al hacer el reporte', 'error');
         } else {
-            mostrarNotificacion('Formulario enviado correctamente', 'exito');
-            console.log(usuario+'...'+solucion);
+            mostrarNotificacion('Gracias por tu reporte, te apoyaremos a la brevedad', 'exito');
         }
     }).catch(error => {
         alert('Error de red: ' + error);
@@ -68,16 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  
-
-
-
-
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Selects de edificio/aula
     const edificioSelect = document.getElementById("edificio");
     const aulaSelect = document.getElementById("aula");
