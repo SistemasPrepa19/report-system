@@ -86,18 +86,28 @@ label {
     margin: 15px 0;
 }
 
+.soporte-btn {
+    padding: 6px;
+    margin: 5px;
+    border-radius: 5px;
+    background: #01acc3;
+    color: white;
+    transition: 0.3s;
+    border: solid 1px #01acc3;
+    font-weight: bold;
+    box-shadow: 0 0 15px #01acc380;
+}
+
 .solution-container input {
     padding: 10px;
-    margin-top: 10px;
+    margin: 15px 0;
     border-radius: 10px;
-    border: none;
-    width: 92%;
+    width: -webkit-fill-available;
     background-color: #ffffff10;
     color: white;
     border: none;
     outline: none;
     transition: box-shadow 0.3s ease-in-out;
-
 }
 
 .solution-container input:focus {
@@ -161,7 +171,7 @@ select {
     border: solid 1px #01acc3;
 }
 
-button:not(#abrirSoporte) {
+.report-btn {
     padding: 5px;
     margin: 5px 0 10px;
     border-radius: 5px;
@@ -174,15 +184,40 @@ button:not(#abrirSoporte) {
     box-shadow: 0 0 15px #01acc380;
 }
 
+.report-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 button:active {
-    background-color: red;
+    background-color: white;
+    color: #01acc3;
+    border: none;
     transform: scale(1.1);
-  }
+}
+
+.report-btn:active {
+    background-color: white;
+    color: #01acc3;
+    border: none;
+    transform: scale(1.1);
+}
 
 footer {
     text-align: center;
     width: 100%;
     bottom: 0;
+}
+
+.solution-container a {
+    color: #01acc3;
+    text-decoration: none;
+    border: solid 1px white;
+    font-weight: bold;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
 }
 
 .notificacion {
@@ -262,19 +297,6 @@ footer {
         transition: 0.3s;
         border: solid 1px #01acc3;
         font-size: 18px;
-    }
-
-    button {
-        padding: 10px;
-        margin: 5px 0 10px;
-        border-radius: 5px;
-        background: #01acc3;
-        color: white;
-        transition: 0.3s;
-        border: solid 1px #01acc3;
-        width: 85%;
-        font-weight: bold;
-        box-shadow: 0 0 15px #01acc380;
     }
 
     label {
