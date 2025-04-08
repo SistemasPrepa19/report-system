@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes P19</title>
+
+    <style>
+
+        * {
+            font-size: 16px;
+            font-family: 'Orbitron', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1e29;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Title */
+        .title {
+            background: linear-gradient(90deg, #132d46, #01acc383);
+            text-align: center;
+            margin: 10px;
+            padding: 1px; 
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0 0 10px #01acc380;
+        }
+
+        h4 {
+            text-shadow: 0px 0px 10px #01acc3;
+        }
+
+        /* Containers */
+        .user-input-container, .form {
+            background-color: rgba(19, 45, 70, 0.8);
+            margin: 10px;
+            padding: 0px 10px 0px 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #01acc34d;
+        }
+
+        .user-input-container {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+        }
+
+        .user-input {
+            border-radius: 5px;
+            margin: -10px 0 10px 0;
+            background: #132d46;
+            color: white;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+        }
+
+
+        .user-input:focus, select:focus {
+            box-shadow: 0px 0px 8px #01acc3;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* General container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Inputs & Select */
+        input, select {
+            padding: 10px;
+            margin: -10px 0 10px 0;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background: #132d46;
+            color: white;
+            transition: 0.3s;
+            border: solid 1px #01acc3;
+        }
+
+        select {
+            width: 90%;
+            margin-top: 1px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+
+        .icono {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            height: 80%;
+            padding: 15px;
+            margin: 10px;
+        }
+
+        option {
+            text-align: left;
+            padding: 0px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px 0 10px;
+            border-radius: 5px;
+            background: #01acc3;
+            color: white;
+            transition: 0.3s;
+            border: solid 1px #01acc3;
+            width: 90%;
+            font-weight: bold;
+            box-shadow: 0 0 15px #01acc380;
+        }
+        
+        footer {
+            background: #01acc388;
+            color: white;
+            text-align: center;
+            padding: px 0;
+            position: relative;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #132d46;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 0 10px #01acc380;
+        }
+
+        .modal button {
+            width: 45%;
+            margin: 5px;
+        }
+
+        #modal-info {
+            text-align: left;
+        }
+
+        .success-message {
+            animation: fadeInOut 3s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: scale(0.8); }
+            20% { opacity: 1; transform: scale(1); }
+            80% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <section class="main">
+        <div class="title">
+            <h1 style="font-size: 24px;">SOPORTE PREPA 19</h1>
+        </div>
+
+        <div class="user-input-container">
+            <h4>Usuario:</h4>
+            <input class="user-input" type="text" name="usuario" id="usuario" placeholder="Nombre:">
+        </div>
+
+        <div class="title">
+            <h1>UBICACIÓN</h1>
+        </div>
+
+        <div class="form">
+            <div class="container">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/916/916771.png" alt="Edificio">
+                <select id="edificio" >
+                    <option value="" disabled selected>Edificio:</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="Biblioteca">Biblioteca</option>
+                    <option value="Control escolar">Control escolar</option>
+                    <option value="Gimnasio">Gimnasio</option>
+                </select>  
+            </div>
+
+            <div class="container">
+                <img class="icono" src="https://static.vecteezy.com/system/resources/previews/007/670/372/non_2x/classroom-line-icon-school-and-education-icon-vector.jpg" alt="Aula">
+                <select id="aula" >
+                    <option value="" disabled selected>Aula:</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>                            
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <img class="icono" src="https://static.vecteezy.com/system/resources/previews/003/542/702/non_2x/line-icon-for-pc-vector.jpg" alt="Maquina">
+                <select id="maquina" >
+                    <option value="" disabled selected>Maquina:</option>
+                    <option value="Profesor">Profesor</option>
+                    <option value="Profesor">Administrador</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>                            
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                </select>
+            </div>          
+        </div>
+
+        <div class="title">
+            <h1>PROBLEMA RESUELTO</h1>
+        </div>
+
+        <div class="form">
+            <div class="container">
+                <img class="icono" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp-19vEeFpmu0Sr7P7E_o_E65aUd3WpiblLA&s" alt="Categoria">
+                <select id="categoria" >
+                    <option value="" disabled selected>Categoría</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Soporte">Soporte</option>
+                </select>
+            </div> 
+            <div class="container">
+                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/1660/1660090.png" alt="Problema">
+                <select id="problema" >
+                    <option value="" disabled selected>Problema</option>
+                    <optgroup label="Hardware">
+                        <option value="Audio">Audio</option>
+                        <option value="Video">Video</option>
+                        <option value="Cámara">Cámara</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Teclado">Teclado</option>
+                        <option value="Disco Duro">Disco Duro</option>
+                        <option value="RAM">RAM</option>
+                        <option value="Limpieza">Limpieza</option>
+                        <option value="Red">Red</option>
+                    </optgroup>
+                    <optgroup label="Software">
+                        <option value="Limpieza">Limpieza</option>
+                        <option value="Actualización">Actualización</option>
+                        <option value="Controladores">Controladores</option>
+                        <option value="Instalación">Instalación</option>
+                        <option value="Instalación">Activación</option>
+                    </optgroup>
+                    <optgroup label="Soporte">
+                        <option value="Apoyo general">Apoyo general</option>
+                        <option value="Diagnóstico">Diagnóstico</option>
+                    </optgroup>
+                </select>
+            </div> 
+            <div class="container">
+                <img class="icono" src="https://img.freepik.com/vector-premium/icono-problema-resuelto-contorno-icono-vector-problema-resuelto-diseno-web-aislado-sobre-fondo-blanco_96318-62159.jpg" alt="Listo">
+                
+                <button id="btnListo">Listo</button>
+            </div> 
+        </div>
+
+        <footer>
+            <p style="font-size: 12px;">
+                &copy; 2025 MBDEV | Todos los derechos reservados
+            </p>
+        </footer>
+    </section>
+
+
+
+
+
+
+    <!-- MODAL -->
+    <div id="modalConfirm" class="modal">
+        <div class="modal-content">
+            <h2 style="font-size: 24px;text-shadow: 0px 0px 15px #01acc3;">
+                Confirmar reporte
+            </h2>
+            <p id="modalInfo" style="text-align: left; margin-left: 10px; margin-bottom: 30px;"></p>
+            <button id="btnCancelar">Cancelar</button>
+            <button id="btnEnviar">Enviar</button>
+        </div>
+    </div>
+
+    <div id="modalSuccess" class="modal">
+        <div class="modal-content success-message">
+            <img style="width: 25%; border-radius: 50%;" src="https://w7.pngwing.com/pngs/873/563/png-transparent-computer-icons-icon-design-business-success-miscellaneous-angle-text-thumbnail.png" alt="">
+            <h2>Se envió correctamente a la bitácora</h2>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        document.getElementById("btnListo").addEventListener("click", function() {
+            // Obtener los valores de los inputs y selects
+            var usuario = document.getElementById("usuario").value;
+            var edificio = document.getElementById("edificio").value;
+            var aula = document.getElementById("aula").value;
+            var maquina = document.getElementById("maquina").value;
+            var categoria = document.getElementById("categoria").value;
+            var problema = document.getElementById("problema").value;
+        
+            // Validar que todos los campos estén completos
+            if (!usuario || !edificio || !aula || !maquina || !categoria || !problema) {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+        
+            // Mostrar datos en el modal
+            document.getElementById("modalInfo").innerHTML = `
+                <strong>Usuario:</strong> ${usuario}<br>
+                <strong>Edificio:</strong> ${edificio}<br>
+                <strong>Aula:</strong> ${aula}<br>
+                <strong>Máquina:</strong> ${maquina}<br>
+                <strong>Categoría:</strong> ${categoria}<br>
+                <strong>Problema:</strong> ${problema}
+            `;
+            
+            document.getElementById("modalConfirm").style.display = "flex";
+        });
+        
+        document.getElementById("btnCancelar").addEventListener("click", function() {
+            document.getElementById("modalConfirm").style.display = "none";
+        });
+        
+        document.getElementById("btnEnviar").addEventListener("click", function() {
+            var usuario = document.getElementById("usuario").value;
+            var edificio = document.getElementById("edificio").value;
+            var aula = document.getElementById("aula").value;
+            var maquina = document.getElementById("maquina").value;
+            var categoria = document.getElementById("categoria").value;
+            var problema = document.getElementById("problema").value;
+        
+            // URL del Web App de Google Apps Script
+            var url = "https://script.google.com/macros/s/AKfycbyQlcBFHm6XM9ipcmLHoTbWpat35_DoDOjQhn4rj2y7g7F8Wacz-ilLcItWpten04xA1Q/exec"; 
+        
+            // Enviar los datos a Google Sheets
+            fetch(url, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ usuario, edificio, aula, maquina, categoria, problema })
+            }).then(() => {
+                document.getElementById("modalConfirm").style.display = "none";
+                document.getElementById("modalSuccess").style.display = "flex";
+                setTimeout(() => {
+                document.getElementById("modalSuccess").style.display = "none";
+                location.reload();
+            }, 3000);
+            }).catch(error => console.error("Error al enviar:", error));
+        });
+        </script>
+        
+
+
+
+    
+
+
+
+
+    
+</body>
+</html>
