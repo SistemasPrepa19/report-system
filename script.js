@@ -67,4 +67,62 @@ document.addEventListener('DOMContentLoaded', function () {
       inputSolucion.style.display = 'block';
     });
   });
+
   
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Selects de edificio/aula
+    const edificioSelect = document.getElementById("edificio");
+    const aulaSelect = document.getElementById("aula");
+    const optgroupsAulaOriginales = Array.from(aulaSelect.querySelectorAll("optgroup"));
+
+    edificioSelect.addEventListener("change", function () {
+      const seleccionado = this.value;
+      aulaSelect.innerHTML = '<option value="" disabled selected>Aula / Lab</option>';
+
+      const especiales = ["Biblioteca", "Coordinación", "Dirección"];
+      if (especiales.includes(seleccionado)) {
+        const opt = document.createElement("option");
+        opt.value = seleccionado;
+        opt.textContent = seleccionado;
+        aulaSelect.appendChild(opt);
+        return;
+      }
+
+      const grupoCoincidente = optgroupsAulaOriginales.find(group => group.label === seleccionado);
+      if (grupoCoincidente) {
+        aulaSelect.appendChild(grupoCoincidente.cloneNode(true));
+      }
+    });
+
+    // Selects de categoría/problema
+    const categoriaSelect = document.getElementById("categoria");
+    const problemaSelect = document.getElementById("problema");
+    const optgroupsProblemaOriginales = Array.from(problemaSelect.querySelectorAll("optgroup"));
+
+    categoriaSelect.addEventListener("change", function () {
+      const seleccionado = this.value;
+      problemaSelect.innerHTML = '<option value="" disabled selected>Problema</option>';
+
+      // Mapeo para traducir valor del select a label del optgroup
+      const categoriaToLabel = {
+        "Hardware": "Físico",
+        "Software": "Aplicación",
+        "Redes": "Internet", // Internet también está bajo Físico (Ethernet)
+        "Otros": "Otros"
+      };
+
+      const label = categoriaToLabel[seleccionado];
+      const grupoCoincidente = optgroupsProblemaOriginales.find(group => group.label === label);
+      if (grupoCoincidente) {
+        problemaSelect.appendChild(grupoCoincidente.cloneNode(true));
+      }
+    });
+  });

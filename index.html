@@ -140,7 +140,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/4703/4703487.png" alt="Maquina">
                 <select id="maquina" name="maquina">
                     <option value="" disabled selected>Maquina</option>
-                    <optgroup label="Otros">
+                    <optgroup label="Principales">
                         <option value="Profesor">PC Profesor</option>
                         <option value="Administrador">PC Administrador</option>
                         <option value="Bocinas">Bocinas</option>
@@ -149,7 +149,7 @@
                         <option value="Pantalla Táctil">Pantalla Táctil</option>
                         <option value="Impresora">Impresora</option>
                         <option value="Servidor/Rack">Servidor/Rack</option>
-                        <option value="Cableado de red">Cableado de red</option>
+                        <option value="Cableado de red">Cable de internet</option> 
                     </optgroup>
                     <optgroup label="Isla 1">
                         <option value="PC 1">PC 1</option>
@@ -214,9 +214,10 @@
                 <img src="https://cdn-icons-png.flaticon.com/256/992/992605.png" alt="Categoria">
                 <select id="categoria" name="categoria">
                     <option value="" disabled selected>Categoría</option>
-                    <option value="Hardware">Hardware</option>
-                    <option value="Software">Software</option>
-                    <option value="Redes">Redes</option>
+                    <option value="Hardware">Problema físico</option>
+                    <option value="Software">Aplicación de pc</option>
+                    <option value="Redes">Internet</option>
+                    <option value="Otros">No sé</option>
                 </select>
             </div>
     
@@ -224,9 +225,30 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/1660/1660090.png" alt="Problema">
                 <select id="problema" name="problema">
                     <option value="" disabled selected>Problema</option>
-                    <option value="Mouse">Mouse</option>
-                    <option value="Teclado">Teclado</option>
-                    <option value="Ethernet">Ethernet</option>
+                    <optgroup label="Físico">
+                        <option value="Ethernet">Internet</option>
+                        <option value="Teclado">Teclado</option>
+                        <option value="Mouse">Mouse</option>
+                        <option value="Monitor">Pantalla</option>
+                        <option value="Bocinas">Bocinas</option>
+                        <option value="No enciende">PC no enciende</option>
+                        <option value="No da video">No da video</option>
+                        <option value="No se escucha">No se escucha</option>
+                        <option value="No graba audio">No tiene micrófono</option>
+                    </optgroup>
+
+                    <optgroup label="Aplicación">
+                        <option value="PC congelada">PC congelada</option>
+                        <option value="Software no instalado">Necesito app en pc</option>
+                    </optgroup>
+
+                    <optgroup label="Internet">
+                        <option value="No hay internet">No hay internet</option>
+                    </optgroup>
+
+                    <optgroup label="Otros">
+                        <option value="Apoyo general">Apoyo general</option>
+                    </optgroup>
                 </select>
             </div>
 
