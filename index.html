@@ -12,269 +12,283 @@
         <h2>Reportes Prepa 19</h2>
     </div>
     
-    
-    <form id="soporteForm" class="form">
-        <div class="instructions">
-            <p>
-                <strong>IMPORTANTE!</strong> <br>
-                Ingresa tu <u>nombre</u> y selecciona las <u>5 opciones</u> correspondientes para dar un soporte eficiente.
-            </p>
+    <div class="main">
+        <div class="left">
+            <div class="left-title">
+                <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Escudo_UdeG.svg" alt="udg logo">
+                <h1>Reportes Prepa 19</h1>
+            </div>
+            <div class="instructions1">
+                <p>
+                    <strong>IMPORTANTE!</strong> <br>
+                    Ingresa tu <u>nombre</u> y selecciona las <u>5 opciones</u> correspondientes para dar un soporte eficiente.
+                </p>
+            </div>
         </div>
 
-        <div class="user-container">
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" placeholder="Nombre" name="usuario" required>
-        </div>
-
-        <div class="options-container">
-            <div class="container">
-                <img src="https://cdn-icons-png.flaticon.com/512/916/916771.png
-                " alt="edificio">
-                <select id="edificio" name="edificio">
-                    <option value="" disabled selected>Edificio</option>
-                    <optgroup label="Edificios">
-                        <option value="Edificio A">Edificio A</option>
-                        <option value="Edificio B">Edificio B</option>
-                        <option value="Edificio C">Edificio C</option>
-                        <option value="Edificio D">Edificio D</option>
-                        <option value="Edificio E">Edificio E</option>
-                        <option value="Edificio T">Edificio T</option>
-                    </optgroup>
-                    <optgroup label="Otros">
-                        <option value="Biblioteca">Biblioteca</option>
-                        <option value="Coordinación">Coordinación</option>
-                        <option value="Dirección">Dirección</option>
-                    </optgroup>
-                </select>
-            </div>
-            
-            <div class="container">
-                <img src="https://cdn-icons-png.freepik.com/512/781/781021.png" alt="aula">
-                <select id="aula" name="aula">
-                    <option value="" disabled selected>Aula / Lab</option>
-                    <optgroup label="Edificio A">
-                        <option value="Laboratorio A">Laboratorio A</option>
-                        <option value="Prefectura">Prefectura</option>
-                        <option value="Laboratorio Ciencias">Laboratorio Ciencias</option>
-                        <option value="Aula 01">Aula 01</option>
-                        <option value="Aula 02">Aula 02</option>
-                        <option value="Aula 03">Aula 03</option>
-                        <option value="Aula 04">Aula 04</option>
-                        <option value="Aula 05">Aula 05</option>
-                        <option value="Aula 06">Aula 06</option>
-                        <option value="Aula 07">Aula 07</option>
-                        <option value="Aula 08">Aula 08</option>
-                    </optgroup>
-                    <optgroup label="Edificio B">
-                        <option value="Laboratorio B">Laboratorio B</option>
-                        <option value="CIVIS">CIVIS</option>
-                        <option value="Oficialía">Oficialía</option>
-                        <option value="Aula 09">Aula 09</option>
-                        <option value="Aula 10">Aula 10</option>
-                        <option value="Aula 11">Aula 11</option>
-                        <option value="Aula 12">Aula 12</option>
-                        <option value="Aula 13">Aula 13</option>
-                        <option value="Aula 14">Aula 14</option>
-                        <option value="Aula 15">Aula 15</option>
-                        <option value="Aula 16">Aula 16</option>
-                    </optgroup>
-                    <optgroup label="Edificio C">
-                        <option value="Laboratorio Biología">Laboratorio Biología</option>
-                        <option value="Usos multiples">Usos multiples</option>
-                        <option value="Aula 17">Aula 17</option>
-                        <option value="Aula 18">Aula 18</option>
-                        <option value="Aula 19">Aula 19</option>
-                        <option value="Aula 20">Aula 20</option>
-                        <option value="Aula 21">Aula 21</option>
-                        <option value="Aula 22">Aula 22</option>
-                        <option value="Aula 23">Aula 23</option>
-                        <option value="Aula 24">Aula 24</option>
-                    </optgroup>
-                    <optgroup label="Edificio D">
-                        <option value="Laboratorio Idiomas">Laboratorio Idiomas</option>
-                        <option value="Cabina de Radio">Cabina de Radio</option>
-                        <option value="Sala de Profesores">Sala de Profesores</option>
-                        <option value="Realidad Virtual">Realidad Virtual</option>
-                        <option value="Aula 25">Aula 25</option>
-                        <option value="Aula 26">Aula 26</option>
-                        <option value="Aula 27">Aula 27</option>
-                        <option value="Aula 28">Aula 28</option>
-                        <option value="Aula 29">Aula 29</option>
-                        <option value="Aula 30">Aula 30</option>
-                        <option value="Aula 31">Aula 31</option>
-                    </optgroup>
-                    <optgroup label="Edificio E">
-                        <option value="Laboratorio E">Laboratorio E</option>
-                        <option value="Oficina">Oficina</option>
-                        <option value="TAE Matemáticas">TAE Matemáticas</option>
-                        <option value="TAE Lectura">TAE Lectura</option>
-                        <option value="TAE Ser Global">TAE Ser Global</option>
-                        <option value="TAE Politicas">TAE Politicas</option>
-                        <option value="CIPD">CIPD</option>
-                        <option value="Libros">Libros</option>
-                        <option value="Gimnasio">Gimnasio</option>
-                        <option value="Bicicletas">Bicicletas</option>
-                    </optgroup>
-                    <optgroup label="Edificio T">
-                        <option value="Fab Lab">Fab Lab</option>
-                        <option value="TAE Música">TAE Música</option>
-                        <option value="TAE Fotografía">TAE Fotografía</option>
-                        <option value="TAE Modas">TAE Modas</option>
-                        <option value="TAE Alimentos">TAE Alimentos</option>
-                        <option value="TAE Teatro">TAE Teatro</option>
-                        <option value="TAE Dibujo">TAE Dibujo</option>
-                        <option value="TAE Robótica">TAE Robótica</option>
-                        <option value="TAE Negocios">TAE Negocios</option>
-                        <option value="TAE Yoga">TAE Yoga</option>
-                        <option value="TAE FabLab">TAE FabLab</option>
-                    </optgroup>
-                    <optgroup label="Otros">
-                        <option value="Biblioteca">Biblioteca</option>
-                        <option value="Coordinación">Coordinación</option>
-                        <option value="Dirección">Dirección</option>
-                    </optgroup>
-                </select>
-            </div>
-            
-            <div class="container">
-                <img src="https://cdn-icons-png.flaticon.com/512/4703/4703487.png" alt="Maquina">
-                <select id="maquina" name="maquina">
-                    <option value="" disabled selected>Maquina</option>
-                    <optgroup label="Principales">
-                        <option value="Profesor">PC Profesor</option>
-                        <option value="Administrador">PC Administrador</option>
-                        <option value="Bocinas">Bocinas</option>
-                        <option value="Proyector">Proyector</option>
-                        <option value="Smart Tv">Smart Tv</option>
-                        <option value="Pantalla Táctil">Pantalla Táctil</option>
-                        <option value="Impresora">Impresora</option>
-                        <option value="Servidor/Rack">Servidor/Rack</option>
-                        <option value="Cableado de red">Cable de internet</option> 
-                    </optgroup>
-                    <optgroup label="Isla 1">
-                        <option value="PC 1">PC 1</option>
-                        <option value="PC 2">PC 2</option>
-                        <option value="PC 3">PC 3</option>
-                        <option value="PC 4">PC 4</option>
-                        <option value="PC 5">PC 5</option>
-                    </optgroup>
-                    <optgroup label="Isla 2">
-                        <option value="PC 6">PC 6</option>
-                        <option value="PC 7">PC 7</option>
-                        <option value="PC 8">PC 8</option>
-                        <option value="PC 9">PC 9</option>
-                        <option value="PC 10">PC 10</option>
-                    </optgroup>
-                    <optgroup label="Isla 3">
-                        <option value="PC 11">PC 11</option>
-                        <option value="PC 12">PC 12</option>
-                        <option value="PC 13">PC 13</option>
-                        <option value="PC 14">PC 14</option>
-                        <option value="PC 15">PC 15</option>
-                    </optgroup>
-                    <optgroup label="Isla 4">
-                        <option value="PC 16">PC 16</option>
-                        <option value="PC 17">PC 17</option>
-                        <option value="PC 18">PC 18</option>
-                        <option value="PC 19">PC 19</option>
-                        <option value="PC 20">PC 20</option>
-                    </optgroup>
-                    <optgroup label="Isla 5">
-                        <option value="PC 21">PC 21</option>
-                        <option value="PC 22">PC 22</option>
-                        <option value="PC 23">PC 23</option>
-                        <option value="PC 24">PC 24</option>
-                        <option value="PC 25">PC 25</option>
-                    </optgroup>
-                    <optgroup label="Isla 6">
-                        <option value="PC 26">PC 26</option>
-                        <option value="PC 27">PC 27</option>
-                        <option value="PC 28">PC 28</option>
-                        <option value="PC 29">PC 29</option>
-                        <option value="PC 30">PC 30</option>
-                    </optgroup>
-                    <optgroup label="Isla 7">
-                        <option value="PC 31">PC 31</option>
-                        <option value="PC 32">PC 32</option>
-                        <option value="PC 33">PC 33</option>
-                        <option value="PC 34">PC 34</option>
-                        <option value="PC 35">PC 35</option>
-                    </optgroup>
-                    <optgroup label="Isla 8">
-                        <option value="PC 36">PC 36</option>
-                        <option value="PC 37">PC 37</option>
-                        <option value="PC 38">PC 38</option>
-                        <option value="PC 39">PC 39</option>
-                        <option value="PC 40">PC 40</option>
-                    </optgroup>
-                </select>
-            </div>
-            
-            <div class="container">
-                <img src="https://cdn-icons-png.flaticon.com/256/992/992605.png" alt="Categoria">
-                <select id="categoria" name="categoria">
-                    <option value="" disabled selected>Categoría</option>
-                    <option value="Hardware">Problema físico</option>
-                    <option value="Software">Aplicación de pc</option>
-                    <option value="Redes">Internet</option>
-                    <option value="Otros">No sé</option>
-                </select>
+        <form id="soporteForm" class="form">
+            <div class="instructions">
+                <p>
+                    <strong>IMPORTANTE!</strong> <br>
+                    Ingresa tu <u>nombre</u> y selecciona las <u>5 opciones</u> correspondientes para dar un soporte eficiente.
+                </p>
             </div>
     
-            <div class="container">
-                <img src="https://cdn-icons-png.flaticon.com/512/1660/1660090.png" alt="Problema">
-                <select id="problema" name="problema">
-                    <option value="" disabled selected>Problema</option>
-                    <optgroup label="Físico">
-                        <option value="Ethernet">Internet</option>
-                        <option value="Teclado">Teclado</option>
-                        <option value="Mouse">Mouse</option>
-                        <option value="Monitor">Pantalla</option>
-                        <option value="Bocinas">Bocinas</option>
-                        <option value="No enciende">PC no enciende</option>
-                        <option value="No da video">No da video</option>
-                        <option value="No se escucha">No se escucha</option>
-                        <option value="No graba audio">No tiene micrófono</option>
-                    </optgroup>
-
-                    <optgroup label="Aplicación">
-                        <option value="PC congelada">PC congelada</option>
-                        <option value="Software no instalado">Necesito app en pc</option>
-                    </optgroup>
-
-                    <optgroup label="Internet">
-                        <option value="No hay internet">No hay internet</option>
-                    </optgroup>
-
-                    <optgroup label="Otros">
-                        <option value="Apoyo general">Apoyo general</option>
-                    </optgroup>
-                </select>
+            <div class="user-container">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" placeholder="Nombre" name="usuario" required>
             </div>
-
-            <div class="container">
-                <img class="icono" src="https://cdn-icons-png.flaticon.com/512/7191/7191281.png" alt="Listo">
-                <button class="report-btn" type="submit">Reportar</button>
-            </div>
-        </div>
-
-        <div class="soporte-container">
-            <button type="button" id="abrirSoporte"><u>(Soy de soporte)</u></button>
-        </div>
-
-        <div class="solution-container" id="solution">
-            <label for="solucion">Solucionado con:</label>
-            <input type="text" id="solucion" placeholder="Solución..." name="solucion">
-            <div class="report-container">
-                <a href="https://docs.google.com/spreadsheets/d/1je52EDEAu93dXHROuKpY194iy4NG5bghCPDfJxBBISo/edit?gid=0#gid=0" target="_blank">
-                    Bitácora 
-                </a>
-                <button class="soporte-btn" type="submit">Enviar</button>
-            </div>
-        </div>
+    
+            <div class="options-container">
+                <div class="container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/916/916771.png
+                    " alt="edificio">
+                    <select id="edificio" name="edificio">
+                        <option value="" disabled selected>Edificio</option>
+                        <optgroup label="Edificios">
+                            <option value="Edificio A">Edificio A</option>
+                            <option value="Edificio B">Edificio B</option>
+                            <option value="Edificio C">Edificio C</option>
+                            <option value="Edificio D">Edificio D</option>
+                            <option value="Edificio E">Edificio E</option>
+                            <option value="Edificio T">Edificio T</option>
+                        </optgroup>
+                        <optgroup label="Otros">
+                            <option value="Biblioteca">Biblioteca</option>
+                            <option value="Coordinación">Coordinación</option>
+                            <option value="Dirección">Dirección</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="container">
+                    <img src="https://cdn-icons-png.freepik.com/512/781/781021.png" alt="aula">
+                    <select id="aula" name="aula">
+                        <option value="" disabled selected>Aula / Lab</option>
+                        <optgroup label="Edificio A">
+                            <option value="Laboratorio A">Laboratorio A</option>
+                            <option value="Prefectura">Prefectura</option>
+                            <option value="Laboratorio Ciencias">Laboratorio Ciencias</option>
+                            <option value="Aula 01">Aula 01</option>
+                            <option value="Aula 02">Aula 02</option>
+                            <option value="Aula 03">Aula 03</option>
+                            <option value="Aula 04">Aula 04</option>
+                            <option value="Aula 05">Aula 05</option>
+                            <option value="Aula 06">Aula 06</option>
+                            <option value="Aula 07">Aula 07</option>
+                            <option value="Aula 08">Aula 08</option>
+                        </optgroup>
+                        <optgroup label="Edificio B">
+                            <option value="Laboratorio B">Laboratorio B</option>
+                            <option value="CIVIS">CIVIS</option>
+                            <option value="Oficialía">Oficialía</option>
+                            <option value="Aula 09">Aula 09</option>
+                            <option value="Aula 10">Aula 10</option>
+                            <option value="Aula 11">Aula 11</option>
+                            <option value="Aula 12">Aula 12</option>
+                            <option value="Aula 13">Aula 13</option>
+                            <option value="Aula 14">Aula 14</option>
+                            <option value="Aula 15">Aula 15</option>
+                            <option value="Aula 16">Aula 16</option>
+                        </optgroup>
+                        <optgroup label="Edificio C">
+                            <option value="Laboratorio Biología">Laboratorio Biología</option>
+                            <option value="Usos multiples">Usos multiples</option>
+                            <option value="Aula 17">Aula 17</option>
+                            <option value="Aula 18">Aula 18</option>
+                            <option value="Aula 19">Aula 19</option>
+                            <option value="Aula 20">Aula 20</option>
+                            <option value="Aula 21">Aula 21</option>
+                            <option value="Aula 22">Aula 22</option>
+                            <option value="Aula 23">Aula 23</option>
+                            <option value="Aula 24">Aula 24</option>
+                        </optgroup>
+                        <optgroup label="Edificio D">
+                            <option value="Laboratorio Idiomas">Laboratorio Idiomas</option>
+                            <option value="Cabina de Radio">Cabina de Radio</option>
+                            <option value="Sala de Profesores">Sala de Profesores</option>
+                            <option value="Realidad Virtual">Realidad Virtual</option>
+                            <option value="Aula 25">Aula 25</option>
+                            <option value="Aula 26">Aula 26</option>
+                            <option value="Aula 27">Aula 27</option>
+                            <option value="Aula 28">Aula 28</option>
+                            <option value="Aula 29">Aula 29</option>
+                            <option value="Aula 30">Aula 30</option>
+                            <option value="Aula 31">Aula 31</option>
+                        </optgroup>
+                        <optgroup label="Edificio E">
+                            <option value="Laboratorio E">Laboratorio E</option>
+                            <option value="Oficina">Oficina</option>
+                            <option value="TAE Matemáticas">TAE Matemáticas</option>
+                            <option value="TAE Lectura">TAE Lectura</option>
+                            <option value="TAE Ser Global">TAE Ser Global</option>
+                            <option value="TAE Politicas">TAE Politicas</option>
+                            <option value="CIPD">CIPD</option>
+                            <option value="Libros">Libros</option>
+                            <option value="Gimnasio">Gimnasio</option>
+                            <option value="Bicicletas">Bicicletas</option>
+                        </optgroup>
+                        <optgroup label="Edificio T">
+                            <option value="Fab Lab">Fab Lab</option>
+                            <option value="TAE Música">TAE Música</option>
+                            <option value="TAE Fotografía">TAE Fotografía</option>
+                            <option value="TAE Modas">TAE Modas</option>
+                            <option value="TAE Alimentos">TAE Alimentos</option>
+                            <option value="TAE Teatro">TAE Teatro</option>
+                            <option value="TAE Dibujo">TAE Dibujo</option>
+                            <option value="TAE Robótica">TAE Robótica</option>
+                            <option value="TAE Negocios">TAE Negocios</option>
+                            <option value="TAE Yoga">TAE Yoga</option>
+                            <option value="TAE FabLab">TAE FabLab</option>
+                        </optgroup>
+                        <optgroup label="Otros">
+                            <option value="Biblioteca">Biblioteca</option>
+                            <option value="Coordinación">Coordinación</option>
+                            <option value="Dirección">Dirección</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4703/4703487.png" alt="Maquina">
+                    <select id="maquina" name="maquina">
+                        <option value="" disabled selected>Maquina</option>
+                        <optgroup label="Principales">
+                            <option value="Profesor">PC Profesor</option>
+                            <option value="Administrador">PC Administrador</option>
+                            <option value="Bocinas">Bocinas</option>
+                            <option value="Proyector">Proyector</option>
+                            <option value="Smart Tv">Smart Tv</option>
+                            <option value="Pantalla Táctil">Pantalla Táctil</option>
+                            <option value="Impresora">Impresora</option>
+                            <option value="Servidor/Rack">Servidor/Rack</option>
+                            <option value="Cableado de red">Cable de internet</option> 
+                        </optgroup>
+                        <optgroup label="Isla 1">
+                            <option value="PC 1">PC 1</option>
+                            <option value="PC 2">PC 2</option>
+                            <option value="PC 3">PC 3</option>
+                            <option value="PC 4">PC 4</option>
+                            <option value="PC 5">PC 5</option>
+                        </optgroup>
+                        <optgroup label="Isla 2">
+                            <option value="PC 6">PC 6</option>
+                            <option value="PC 7">PC 7</option>
+                            <option value="PC 8">PC 8</option>
+                            <option value="PC 9">PC 9</option>
+                            <option value="PC 10">PC 10</option>
+                        </optgroup>
+                        <optgroup label="Isla 3">
+                            <option value="PC 11">PC 11</option>
+                            <option value="PC 12">PC 12</option>
+                            <option value="PC 13">PC 13</option>
+                            <option value="PC 14">PC 14</option>
+                            <option value="PC 15">PC 15</option>
+                        </optgroup>
+                        <optgroup label="Isla 4">
+                            <option value="PC 16">PC 16</option>
+                            <option value="PC 17">PC 17</option>
+                            <option value="PC 18">PC 18</option>
+                            <option value="PC 19">PC 19</option>
+                            <option value="PC 20">PC 20</option>
+                        </optgroup>
+                        <optgroup label="Isla 5">
+                            <option value="PC 21">PC 21</option>
+                            <option value="PC 22">PC 22</option>
+                            <option value="PC 23">PC 23</option>
+                            <option value="PC 24">PC 24</option>
+                            <option value="PC 25">PC 25</option>
+                        </optgroup>
+                        <optgroup label="Isla 6">
+                            <option value="PC 26">PC 26</option>
+                            <option value="PC 27">PC 27</option>
+                            <option value="PC 28">PC 28</option>
+                            <option value="PC 29">PC 29</option>
+                            <option value="PC 30">PC 30</option>
+                        </optgroup>
+                        <optgroup label="Isla 7">
+                            <option value="PC 31">PC 31</option>
+                            <option value="PC 32">PC 32</option>
+                            <option value="PC 33">PC 33</option>
+                            <option value="PC 34">PC 34</option>
+                            <option value="PC 35">PC 35</option>
+                        </optgroup>
+                        <optgroup label="Isla 8">
+                            <option value="PC 36">PC 36</option>
+                            <option value="PC 37">PC 37</option>
+                            <option value="PC 38">PC 38</option>
+                            <option value="PC 39">PC 39</option>
+                            <option value="PC 40">PC 40</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <div class="container">
+                    <img src="https://cdn-icons-png.flaticon.com/256/992/992605.png" alt="Categoria">
+                    <select id="categoria" name="categoria">
+                        <option value="" disabled selected>Categoría</option>
+                        <option value="Hardware">Problema físico</option>
+                        <option value="Software">Aplicación de pc</option>
+                        <option value="Redes">Internet</option>
+                        <option value="Otros">No sé</option>
+                    </select>
+                </div>
         
-
-    </form>
+                <div class="container">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1660/1660090.png" alt="Problema">
+                    <select id="problema" name="problema">
+                        <option value="" disabled selected>Problema</option>
+                        <optgroup label="Físico">
+                            <option value="Ethernet">Internet</option>
+                            <option value="Teclado">Teclado</option>
+                            <option value="Mouse">Mouse</option>
+                            <option value="Monitor">Pantalla</option>
+                            <option value="Bocinas">Bocinas</option>
+                            <option value="No enciende">PC no enciende</option>
+                            <option value="No da video">No da video</option>
+                            <option value="No se escucha">No se escucha</option>
+                            <option value="No graba audio">No tiene micrófono</option>
+                        </optgroup>
+    
+                        <optgroup label="Aplicación">
+                            <option value="PC congelada">PC congelada</option>
+                            <option value="Software no instalado">Necesito app en pc</option>
+                        </optgroup>
+    
+                        <optgroup label="Internet">
+                            <option value="No hay internet">No hay internet</option>
+                        </optgroup>
+    
+                        <optgroup label="Otros">
+                            <option value="Apoyo general">Apoyo general</option>
+                        </optgroup>
+                    </select>
+                </div>
+    
+                <div class="container">
+                    <img class="icono" src="https://cdn-icons-png.flaticon.com/512/7191/7191281.png" alt="Listo">
+                    <button class="report-btn" type="submit">Reportar</button>
+                </div>
+            </div>
+    
+            <div class="soporte-container">
+                <button type="button" id="abrirSoporte"><u>(Soy de soporte)</u></button>
+            </div>
+    
+            <div class="solution-container" id="solution">
+                <label for="solucion">Solucionado con:</label>
+                <input type="text" id="solucion" placeholder="Solución..." name="solucion">
+                <div class="report-container">
+                    <a href="https://docs.google.com/spreadsheets/d/1je52EDEAu93dXHROuKpY194iy4NG5bghCPDfJxBBISo/edit?gid=0#gid=0" target="_blank">
+                        Bitácora 
+                    </a>
+                    <button class="soporte-btn" type="submit">Enviar</button>
+                </div>
+            </div>
+            
+    
+        </form>
+    </div>
 
     <footer>
         <p style="font-size: 12px;">
